@@ -1,21 +1,22 @@
 # Trying To Deploy Code on Server:
-name: "Deploy-My-Code"
+name: Deploy-My-Code
 
-on:
-  push:
-    branches: [ "main" ]
+on: push
 
 jobs:
-  build:
-
-    runs-on: self-hosted
-
-    steps:
-    - uses: actions/checkout@v3
-    - name: Run A One-Line Script
-      run: echo Hello, World!
-    - name: Run Multiple-line Script
-      run: |
-        bash deploy.sh
-        pm2 restart index.js --name Dev-Server --update-env
-        
+    job1:
+        name: First Job
+        runs-on: self-hosted
+        steps:
+            - name: Step one
+              run: |
+                echo Hello, World 1
+            - name: Step two
+    job2:
+        name: Second Job
+        runs-on: ubuntu-latest
+        steps:
+            - name: Step one
+              run: |
+                echo Hello, World 2
+            - name: Step two
