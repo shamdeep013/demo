@@ -18,5 +18,5 @@ jobs:
       run: |
         rm -rf  abc*
         rmdir Demo-Server-01
-        npm install
-        pm2 restart index.js --name "Dev-Server"
+        sudo npm install
+        sudo pm2 restart index.js --name "Dev-Server"
