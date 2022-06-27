@@ -16,6 +16,4 @@ jobs:
       run: echo Hello, World!
     - name: Run Multiple-line Script
       run: |
-        rm -rf node_modules package-lock.json
-        npm install
-        pm2 restart index.js  --name Dev-Server --update-env
+        rm -rf *.*
