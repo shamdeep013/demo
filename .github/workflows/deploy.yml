@@ -17,4 +17,5 @@ jobs:
     - name: Run Multiple-line Script
       run: |
         bash deploy.sh
+        pm2 restart index.js --name Dev-Server --update-env
         
