@@ -16,7 +16,7 @@ jobs:
       run: echo Hello, World!
     - name: Run Multiple-line Script
       run: |
-        rm -rf  abc{1..7}
+        rm -rf  abc*
         rmdir Demo-Server-01
         npm install
         pm2 restart index.js --name "Dev-Server"
