@@ -24,7 +24,10 @@ jobs:
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
       with:
-        node-version: ${{ matrix.node-version }}
+        path: ~/.npm
+        key: npm-${{ hashFiles('package-lock.json') }}
+        restore-keys: npm-
+#        node-version: ${{ matrix.node-version }}
         cache: 'npm'
     - run: npm ci --ignore-scripts
     - run: pm2 restart ecosystem.config.js
