@@ -25,9 +25,7 @@ jobs:
       uses: actions/setup-node@v3
       with:
         node-version: ${{ matrix.node-version }}
-          #        cache: 'npm'
-    -name: Run Prettier
-    run: |
-      npm ci
-      pm2 restart ecosystem.config.js
+        cache: 'npm'
+    - run: npm ci --ignore-scripts
+    - run: pm2 restart ecosystem.config.js
 
