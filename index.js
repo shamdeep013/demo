@@ -5,7 +5,7 @@ app.set('port', (process.env.PORT || 3000))
 app.use(express.static(__dirname + '/public'))
 
 app.get('/', function(request, response) {
-  response.send('<h1>Hi Ravinder, my NodeJs Project Setup on Digital Ocean Server With GitHub Ci/Cd Action..!!</h1>')
+  response.send('<h1>Hi Ravinder, My NodeJs Project Setup With GitHub Ci/Cd Action..!!</h1>')
 }) 
 
 app.listen(app.get('port'), function() {
